@@ -2,26 +2,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 100px;
-  margin: 40px 0;
+  padding: 30px 60px;
+  margin: 30px 0;
   background-color: white;
   color: #333;
   > .imgWrap {
-    width: 320px;
-    height: 240px;
+    width: 200px;
+    height: 150px;
     margin-right: 40px;
     background-color: #f8f8f8;
     > img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
   > .ctnWrap {
     flex: 1;
     > .title {
-      font-weight: 600;
-      font-size: 28px;
-      line-height: 40px;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 32px;
       &:hover {
         opacity: 1;
         color: #f0534e;
@@ -50,18 +51,19 @@
     &::after {
       content: '';
       position: absolute;
-      left: 100px;
-      right: 100px;
+      left: 60px;
+      right: 60px;
       bottom: 0;
       height: 1px;
       background-color: #e5e5e5;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
     }
     @media screen and (max-width: 600px) {
-      flex-direction: column;
+      // flex-direction: column;
       padding: 20px;
       > .imgWrap {
         margin-left: 0;
-        margin-bottom: 20px;
       }
       &::after {
         left: 20px;
@@ -70,14 +72,27 @@
     }
   }
   @media screen and (max-width: 600px) {
-    flex-direction: column;
+    // flex-direction: column;
     padding: 20px;
     margin: 10px 0;
     > .imgWrap {
       margin-left: 0;
-      margin-right: 0;
-      margin-bottom: 20px;
+      margin-right: 16px;
       width: 100%;
+      width: 100px;
+      height: 80px;
+    }
+    > .ctnWrap {
+      > .title {
+        line-height: 26px;
+        &:hover {
+          color: #333;
+        }
+      }
+      > .sub {
+        font-size: 14px;
+        line-height: 0px;
+      }
     }
   }
 }

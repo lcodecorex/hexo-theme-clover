@@ -31,6 +31,8 @@ $brand-color: #f0534e;
       margin-bottom: 15px;
     }
 
+    img{display:block;margin:0 auto;}
+
     pre, .highlight {
       overflow: auto;;
       padding: 0;
@@ -105,17 +107,21 @@ $brand-color: #f0534e;
   > footer {
     padding: 40px 0;
     border-top: solid 1px #eee;
+    text-align: center;
     > .link {
       font-size: 16px;
       line-height: 22px;
-      max-width: 50%;
     }
   }
   @media screen and (max-width: 600px) {
     padding: 20px 20px 0;
-    margin: 20px 0;
+    margin: 0;
     > footer {
       padding: 10px 0;
+    }
+    > .title {
+      font-size: 20px;
+      line-height: 30px;
     }
   }
 }
